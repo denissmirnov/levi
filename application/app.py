@@ -28,10 +28,12 @@ class Application(BaseApp):
                 MainHandler
             ),
         )
-        self.setup_logging(
-            tracer_driver=config['logging']['tracer'],
-            tracer_svc_name=config['logging']['tracer_svc_name'],
-            tracer_url=config['logging']['tracer_url'],
-            statsd_addr=config['logging']['statsd_addr'],
-            statsd_prefix=config['logging']['statsd_prefix']
-        )
+
+        if 'logging' in config:
+            self.setup_logging(
+                tracer_driver=config['logging']['tracer'],
+                tracer_svc_name=config['logging']['tracer_svc_name'],
+                tracer_url=config['logging']['tracer_url'],
+                statsd_addr=config['logging']['statsd_addr'],
+                statsd_prefix=config['logging']['statsd_prefix']
+            )
