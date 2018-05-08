@@ -1,10 +1,10 @@
 import asyncio
 
-from app.core.app import BaseApp
-from app.core.http_client import HttpClient
-from app.core.http_server import HttpServer
-from app.db.main_db import MainDb
-from app.handlers.main_handler import MainHandler
+from application.core.app import BaseApp
+from application.core.http_client import HttpClient
+from application.core.http_server import HttpServer
+from application.db.main_db import MainDb
+from application.handlers.main_handler import MainHandler
 
 
 class Application(BaseApp):

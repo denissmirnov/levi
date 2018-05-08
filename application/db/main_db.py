@@ -1,4 +1,4 @@
-from app.core.db import DB
+from application.core.db import DB
 
 
 class MainDb(DB):

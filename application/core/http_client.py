@@ -8,8 +8,8 @@ import aiozipkin.aiohttp_helpers as azah
 import aiozipkin.constants as azc
 from aiohttp import TCPConnector, ClientSession, client_exceptions
 
-from app.core.component import Component
-from app.core.helper import annotate_bytes
+from application.core.component import Component
+from application.core.helper import annotate_bytes
 
 
 class HttpClient(Component):

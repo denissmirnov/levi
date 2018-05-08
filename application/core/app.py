@@ -5,9 +5,9 @@ import logging
 import aiozipkin as az
 from aiohttp.web_runner import _raise_graceful_exit
 
-from app.core.component import Component
-from app.core.helper import GracefulExit, PrepareError
-from app.core.tracer import TracerTransport
+from application.core.component import Component
+from application.core.helper import GracefulExit, PrepareError
+from application.core.tracer import TracerTransport
 
 
 class BaseApp(object):

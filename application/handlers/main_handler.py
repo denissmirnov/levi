@@ -5,8 +5,8 @@ import sys
 from aiohttp import web
 from aiohttp.web_request import Request
 
-from app.core.handler import BaseHandler
-from app.parsers.main_parser import MainParser
+from application.core.handler import BaseHandler
+from application.parsers.main_parser import MainParser
 
 
 class MainHandler(BaseHandler):

@@ -2,7 +2,7 @@ import json
 import asyncio
 import aioamqp
 
-from .app import Component
+from application.core.component import Component
 
 
 class AMQPServer(Component):

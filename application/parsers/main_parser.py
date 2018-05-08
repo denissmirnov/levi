@@ -3,8 +3,8 @@ import logging
 import aiohttp_jinja2
 from aiohttp.web_request import Request
 
-from app.core.handler import BaseHandler
-from app.lib.main_misc import MainMisc
+from application.core.handler import BaseHandler
+from application.lib.main_misc import MainMisc
 
 
 class MainParser(BaseHandler):

@@ -8,9 +8,9 @@ import traceback
 
 from aiozipkin.constants import HTTP_PATH, HTTP_METHOD
 
-from app.core.handler import BaseHandler
-from app.core.helper import annotate_bytes
-from .app import Component
+from application.core.handler import BaseHandler
+from application.core.helper import annotate_bytes
+from application.core.component import Component
 import logging
 import aiozipkin as az
 import aiozipkin.aiohttp_helpers as azah
@@ -37,7 +37,7 @@ class HttpServer(Component):
         self.app = app
         self.loop = app.loop
         self.web_app = web.Application(loop=self.loop, middlewares=[self.wrap_middleware, ])
-        aiohttp_jinja2.setup(self.web_app, loader=jinja2.FileSystemLoader('app/templates'))
+        aiohttp_jinja2.setup(self.web_app, loader=jinja2.FileSystemLoader('application/templates'))
         self.host = host
         self.port = port
         self.error_handler = None

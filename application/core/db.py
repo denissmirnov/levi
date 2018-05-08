@@ -3,8 +3,8 @@ import aiozipkin as az
 import asyncio
 import asyncpg
 
-from app.core.app import Component
-from app.core.helper import PrepareError
+from application.core.app import Component
+from application.core.helper import PrepareError
 
 
 def db_decorator(func):
